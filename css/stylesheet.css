@@ -1,75 +1,83 @@
-html, body, *{
-    margin: 0%;
-}
-.hovedboks {
-    margin: auto;
-    max-width: 4096px;
-    max-height: 2160px;
-    background-color: rgb(254, 204, 245);
-}
-h1 {
-    text-align: center;
-}
-h4 {
-    text-align: center;
-}
+/*styling*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   body {
+    font-family: cursive;
+   }
+   a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none;
+   }
 
-
-.innholdsboks  {
-    padding: 20px;
+/*flexbox*/
+.navbar {
     display: flex;
-    flex-direction: row;
-    background-color: rgb(203, 98, 251);
-    position: relative; top: 30px
-    
-}
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    color: black;
+   }
+   .nav-links a {
+    color: black;
+   }
+   .logo {
+    font-size: 18px;
+   }
+   .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:hover {
+    background-color: grey;
+    border-radius: 5px;
+    transition: 0.3s ease;
+   }
+   .menu li {
+    padding: 5px 14px;
+   }
+   .services {
+    position: relative; 
+   }
+   .dropdown {
+    background-color: grey;
+    padding: 1em 0;
+    position: absolute;
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+   }
+   .dropdown li + li {
+    margin-top: 10px;
+   }
+   .dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+   }
+   .dropdown li:hover {
+    background-color: grey;
+   }
+   .services:hover .dropdown {
+    display: block;
+   }
+
+   body {
+    background-color: rgb(29, 29, 29);
+   }
 .bilde {
-    float: right;
-    background-color: rgb(203, 98, 251);
-    
-}
-.footer {
-    position: relative; top: 40px;
-    padding: 20px;
-    background-color:rgb(254, 204, 245);
-}
-.bildetekst {
-    width: 50%;
-    background-color: rgb(203, 98, 251);
-    font-size: 1rem;
-}
-.foot {
-    position: relative; top: 60px;
-    height: 200px;
-    background-color: rgb(80, 0, 150);
-    color: white;
-    font-size: 20px;
-    padding: 10px;
-}
-#gmail {
-    position: relative; left: 300px;
-    position: relative; bottom: 21px;
-    display: flex;
-    flex-direction: row;
-}
-#mobilnr {
-    position: relative; left: 300px;
-    display: flex;
-    flex-direction: row;
-}
-body {
-    background-color: rgb(254, 204, 245);
+    size: 100px;
 }
 
-/* mediaquery for mobil*/
+/*for mobil*/
 @media screen and (max-width: 768px) {
-	.innholdsboks{
-		display:flex;
-		flex-direction: column;
-		gap: 0.5rem;
-        align-items: center;
-        justify-content: center;
+	nav{
+		display: none;
 	}
 }
-
-
