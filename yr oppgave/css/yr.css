@@ -1,0 +1,10 @@
+table, tr, td{
+    border: solid cornflowerblue;
+    background-color:rgb(233, 242, 255);
+    
+} 
+
+.hovedboks{
+    max-width: fit-content;
+    margin: auto;
+}
